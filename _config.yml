@@ -37,6 +37,7 @@ sass:
 markdown: kramdown
 kramdown:
     auto_ids: true
+theme: artsy
 remote_theme: ebkalderon/artsy
 exclude:
   - Gemfile

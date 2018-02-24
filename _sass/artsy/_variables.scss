@@ -2,9 +2,9 @@
 /// Common variables.
 ////
 
-// @import "sass/utilities/initial-variables";
-// @import "sass/utilities/functions";
-// @import "sass/utilities/derived-variables";
+@import "vendor/sass/utilities/initial-variables";
+@import "vendor/sass/utilities/functions";
+@import "vendor/sass/utilities/derived-variables";
 
 // Colors
 $navbar-item-color: $grey-dark;
