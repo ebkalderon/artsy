@@ -37,8 +37,10 @@ sass:
 markdown: kramdown
 kramdown:
     auto_ids: true
-theme: artsy
+# theme: artsy
 remote_theme: ebkalderon/artsy
+
+# Exclude from processing.
 exclude:
   - Gemfile
   - Gemfile.lock
