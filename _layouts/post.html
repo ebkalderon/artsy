@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+<header class="hero is-primary is-medium">
+  <div class="hero-body has-text-centered" style="background-image: url({{ page.image }}); background-size: cover;">
+    <h1 class="title is-size-1-desktop">
+      {{ page.title }}
+    </h1>
+    <h4 class="subtitle">
+      {% if page.author %}
+        {{ page.author }} |
+      {% else %}}
+        {{ site.author }} |
+      {% endif %}
+      <time datetime="{{ page.date | date_to_xmlschema }}">
+        {{ page.date | date: "%B %e, %Y" }}
+      </time>
+    </h4>
+    {% include tags.html tags=page.tags %}
+  </div>
+</header>
+
+<article class="section">
+  <div class="container content">
+    {{ content }}
+  </div>
+</article>

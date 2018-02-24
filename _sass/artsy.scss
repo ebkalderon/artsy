@@ -1,0 +1,63 @@
+////
+/// Artsy theme for Jekyll
+/// @author Eyal Kalderon
+////
+
+@charset "utf-8";
+
+@import "artsy/variables";
+@import "artsy/navigation";
+
+@import "bulma";
+
+.site-container {
+  @extend .columns;
+  @extend .is-desktop;
+  @extend .is-gapless;
+
+  .site-header {
+    @extend .column;
+    @extend .is-narrow;
+    @extend .is-transparent;
+
+    min-width: 10%;
+    
+    .navbar {
+      flex-direction: column;
+
+      .navbar-brand {
+        h1 {
+          font-family: 'Raleway', sans-serif;
+          font-weight: 700;
+        }
+      }
+
+      .navbar-menu {
+        flex-direction: column;
+      }
+
+      .navbar-item {
+        a {
+          color: $navbar-item-color;
+          transition: color 0.5s ease;
+
+          &:hover {
+            color: $navbar-item-hover-color;
+          }
+        }
+      }
+    }
+  }
+
+  .site-content {
+    @extend .column;
+
+    background-color: hsl(0, 0, 97%);
+  }
+
+  .site-footer {
+    @extend .footer;
+ 
+    color: $light;
+  }
+}

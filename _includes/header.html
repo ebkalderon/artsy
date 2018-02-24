@@ -1,0 +1,22 @@
+<header class="site-header">
+  <nav class="navbar">
+    <!-- Site branding -->
+    <section class="navbar-brand">
+      <a class="navbar-item" href="{{ "/" | relative_url }}">
+        <h1 class="title">artsy</h1>
+      </a>
+      <div class="navbar-burger burger" data-target="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <!-- Navigation links -->
+    <section class="navbar-menu" id="navMenu">
+      {% for link in site.data.navigation %}
+        <a class="navbar-item" href="{{ link.url | relative_url }}">{{ link.name }}</a>
+      {% endfor %}
+    </section>
+  </nav>
+</header>
