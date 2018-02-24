@@ -5,10 +5,10 @@
 
 @charset "utf-8";
 
+@import "bulma";
+
 @import "artsy/variables";
 @import "artsy/navigation";
-
-@import "bulma";
 
 .site-container {
   @extend .columns;
