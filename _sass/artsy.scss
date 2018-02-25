@@ -15,36 +15,22 @@
   @extend .is-desktop;
   @extend .is-gapless;
 
-  .site-header {
+  header.site-header {
     @extend .column;
     // @extend .is-narrow;
     @extend .is-transparent;
 
     min-width: 10%;
     
-    .navbar {
+    nav.navbar {
       flex-direction: column;
-
-      .navbar-brand {
-        h1 {
-          font-family: 'Raleway', sans-serif;
-          font-weight: 700;
-        }
-      }
 
       .navbar-menu {
         flex-direction: column;
       }
 
       .navbar-item {
-        a {
-          color: $navbar-item-color;
-          transition: color 0.5s ease;
-
-          &:hover {
-            color: $navbar-item-hover-color;
-          }
-        }
+        transition: color,background-color 0.3s ease;
       }
     }
   }
@@ -55,7 +41,7 @@
     background-color: hsl(0, 0, 97%);
   }
 
-  .site-footer {
+  footer.site-footer {
     @extend .footer;
  
     color: $light;
