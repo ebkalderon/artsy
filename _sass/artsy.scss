@@ -18,12 +18,11 @@
   header.site-header {
     @extend .column;
     // @extend .is-narrow;
-    @extend .is-transparent;
-
     min-width: 10%;
     
     nav.navbar {
       flex-direction: column;
+      height: 100%;
 
       .navbar-menu {
         flex-direction: column;
@@ -37,13 +36,10 @@
 
   .site-content {
     @extend .column;
-
-    background-color: hsl(0, 0, 97%);
   }
 
   footer.site-footer {
     @extend .footer;
- 
     color: $light;
   }
 }

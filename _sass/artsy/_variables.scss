@@ -7,9 +7,14 @@
 @import "vendor/sass/utilities/derived-variables";
 
 // Colors
-$navbar-item-color: $grey-dark;
-$navbar-item-hover-color: $black;
-$primary: $turquoise;
-$footer-background-color: $dark;
+$body-background-color: hsl(0, 0, 98%) !default;
+
+$navbar-background-color: $white !default;
+$navbar-item-color: $grey-dark !default;
+$navbar-item-hover-color: $black !default;
+
+$primary: $turquoise !default;
+
+$footer-background-color: $dark !default;
 
 // Typography
