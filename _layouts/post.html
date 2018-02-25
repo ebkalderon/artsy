@@ -2,31 +2,30 @@
 layout: default
 ---
 
-<header class="hero is-primary is-large">
-  {% if page.image %}
-  <div class="hero-body has-text-centered hero-body-{{ page.title | slugify }}">
-  {% else %}
-  <div class="hero-body has-text-centered">
-  {% endif %}
-    <h1 class="title is-size-1-desktop">
-      {{ page.title }}
-    </h1>
-    <h4 class="subtitle">
-      {% if page.author %}
-        {{ page.author }} |
-      {% else %}
-        {{ site.author }} |
-      {% endif %}
-      <time datetime="{{ page.date | date_to_xmlschema }}">
-        {{ page.date | date: "%B %e, %Y" }}
-      </time>
-    </h4>
-    {% include tags.html tags=page.tags %}
-  </div>
-</header>
-
-<article class="section">
-  <div class="container content">
+<article>
+  <header class="hero is-primary is-large">
+    {% if page.image %}
+    <div class="hero-body has-text-centered hero-body-{{ page.title | slugify }}">
+    {% else %}
+    <div class="hero-body has-text-centered">
+    {% endif %}
+      <h1 class="title is-size-1-desktop">
+        {{ page.title }}
+      </h1>
+      <h4 class="subtitle">
+        {% if page.author %}
+          {{ page.author }} |
+        {% else %}
+          {{ site.author }} |
+        {% endif %}
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %e, %Y" }}
+        </time>
+      </h4>
+      {% include tags.html tags=page.tags %}
+    </div>
+  </header>
+  <section class="container content">
     {{ content }}
-  </div>
+  </section>
 </article>

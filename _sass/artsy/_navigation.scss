@@ -12,5 +12,9 @@
 
   .navbar-item {
     transition: color,background-color 0.3s ease;
+
+    &.is-active:hover {
+      background-color: $navbar-item-active-background-color;
+    }
   }
 }

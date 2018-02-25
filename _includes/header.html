@@ -1,22 +1,26 @@
 <header class="site-header">
   <nav class="navbar">
     <!-- Site branding -->
-    <section class="navbar-brand">
+    <div class="navbar-brand">
       <a class="navbar-item" href="{{ "/" | relative_url }}">
         <img src="{{ site.logo | relative_url }}" alt="Logo">
       </a>
-      <div class="navbar-burger burger" data-target="navMenu">
+      <div class="navbar-burger burger" data-target="nav-menu-id">
         <span></span>
         <span></span>
         <span></span>
       </div>
-    </section>
+    </div>
 
     <!-- Navigation links -->
-    <section class="navbar-menu" id="navMenu">
+    <div class="navbar-menu" id="nav-menu-id">
       {% for link in site.data.navigation %}
-        <a class="navbar-item" href="{{ link.url | relative_url }}">{{ link.name }}</a>
+        {%- if link.url == page.url -%}
+          <a class="navbar-item is-active" href="{{ link.url | relative_url }}">{{ link.name }}</a>
+        {%- else -%}
+          <a class="navbar-item" href="{{ link.url | relative_url }}">{{ link.name }}</a>
+        {%- endif -%}
       {% endfor %}
-    </section>
+    </div>
   </nav>
 </header>

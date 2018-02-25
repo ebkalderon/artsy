@@ -1,28 +1,28 @@
-<section class="card">
+<div class="card">
   <!-- Post thumbnail -->
   <div class="card-image">
     <figure class="image is-2by1">
       {% if include.image %}
-      <img src="{{ include.image | relative_url }}" alt="Image for {{ include.title }}"/>
+      <img src="{{ include.image | relative_url }}" alt="Image for {{ include.title }}">
       {% endif %}
     </figure>
   </div>
 
   <!-- Post details -->
-  <div class="card-content">
-    <p class="title is-4">{{ include.title | upcase }}</p>
+  <section class="card-content">
+    <h4 class="title is-4">{{ include.title | upcase }}</h4>
     <time class="subtitle is-6" datetime="{{ include.date | date_to_xmlschema }}">
       {{ include.date | date: "%B %e, %Y" }}
     </time>
-    <p class="content">
+    <div class="content">
       {{ include.excerpt }}
-    </p>
-  </div>
-
-  <! -- Tags (if any) -->
-  {% if include.tags %}
-    <div class="card-content">
-      {% include tags.html tags=include.tags %}
     </div>
+  </section>
+
+  <!-- Tags (if any) -->
+  {% if include.tags %}
+  <div class="card-content">
+    {%- include tags.html tags=include.tags -%}
+  </div>
   {% endif %}
-</section>
+</div>
