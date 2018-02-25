@@ -16,11 +16,10 @@ Gem::Specification.new do |spec|
     f.match(%{r!^(assets|_layouts|_includes|_sass|LICENSE|README)!i})
   end
 
-  # spec.add_runtime_dependency 'bulma-sass', '~> 0.6'
   spec.add_runtime_dependency 'jekyll', '~> 3.7'
   spec.add_runtime_dependency 'jekyll-seo-tag', '~> 2.4'
   spec.add_runtime_dependency 'jekyll-sitemap', '~> 1.2'
-  spec.add_runtime_dependency 'jemoji', '~> 0.9'
+  spec.add_runtime_dependency 'jemoji', '~> 0.8'
 
   spec.add_development_dependency 'bundler', '~> 1.16'
   spec.add_development_dependency 'rake', '~> 12.0'
