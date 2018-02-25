@@ -1,26 +1,22 @@
 <footer class="site-footer">
   <div class="columns">
     <div class="column">
-      <div class="section">
-        <p>&copy; {{ site.author }} {{ site.time | date: '%Y' }}. All rights reserved.</p>
-        <p>Built in Jekyll with <i class="fa fa-heart"></i></p>
-      </div>
+      <p>&copy; {{ site.author }} {{ site.time | date: '%Y' }}. All rights reserved.</p>
+      <p>Built in Jekyll with <i class="fa fa-heart"></i></p>
     </div>
     <div class="column">
-      <div class="section">
-        <div class="level">
-        {% for social in site.data.socials %}
-          <a class="level-item" href="{{ social.url }}">
+      <div class="level">
+      {% for social in site.data.socials %}
+        <a class="level-item" href="{{ social.url }}">
+          <figure class="icon is-large">
             <i class="fa-2x {{ social.icon }}"></i>
-          </a>
-        {% endfor %}
-        </div>
+          </figure>
+        </a>
+      {% endfor %}
       </div>
     </div>
     <div class="column">
-      <p class="section">
-        {{ site.description }}
-      </p>
+      {{ site.description }}
     </div>
   </div>
 </footer>
