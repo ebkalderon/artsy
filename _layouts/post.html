@@ -2,8 +2,12 @@
 layout: default
 ---
 
-<header class="hero is-primary is-medium">
-  <div class="hero-body has-text-centered" style="background-image: url({{ page.image | relative_url }}); background-size: cover;">
+<header class="hero is-primary is-large">
+  {% if page.image %}
+  <div class="hero-body has-text-centered hero-body-{{ page.title | slugify }}">
+  {% else %}
+  <div class="hero-body has-text-centered">
+  {% endif %}
     <h1 class="title is-size-1-desktop">
       {{ page.title }}
     </h1>

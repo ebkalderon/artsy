@@ -1,3 +1,16 @@
 ////
 /// Responsive navigation code.
 ////
+
+.site-header > .navbar {
+  flex-direction: column;
+  height: 100%;
+
+  .navbar-menu {
+    flex-direction: column;
+  }
+
+  .navbar-item {
+    transition: color,background-color 0.3s ease;
+  }
+}

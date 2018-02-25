@@ -1,0 +1,29 @@
+////
+/// Site layout
+////
+
+.site-container {
+  @extend .columns;
+  @extend .is-desktop;
+  @extend .is-gapless;
+
+  header.site-header {
+    @extend .column;
+    // @extend .is-narrow;
+    min-width: 10%;
+  }
+
+  .site-content {
+    @extend .column;
+
+    .hero-post-body {
+      @extend .hero-body;
+      @extend .has-text-centered;
+    }
+  }
+
+  footer.site-footer {
+    @extend .footer;
+    color: $light;
+  }
+}

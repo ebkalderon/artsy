@@ -7,7 +7,9 @@
 @import "vendor/sass/utilities/derived-variables";
 
 // Colors
-$body-background-color: hsl(0, 0, 98%) !default;
+$body-background-color: hsl(0, 0, 97%) !default;
+
+$hero-body-blog-background-color: rgba(100, 100, 100, 0.5) !default;
 
 $navbar-background-color: $white !default;
 $navbar-item-color: $grey-dark !default;

@@ -6,40 +6,8 @@
 @charset "utf-8";
 
 @import "artsy/variables";
+@import "artsy/base";
+@import "artsy/layout";
 @import "artsy/navigation";
 
 @import "vendor/bulma";
-
-.site-container {
-  @extend .columns;
-  @extend .is-desktop;
-  @extend .is-gapless;
-
-  header.site-header {
-    @extend .column;
-    // @extend .is-narrow;
-    min-width: 10%;
-    
-    nav.navbar {
-      flex-direction: column;
-      height: 100%;
-
-      .navbar-menu {
-        flex-direction: column;
-      }
-
-      .navbar-item {
-        transition: color,background-color 0.3s ease;
-      }
-    }
-  }
-
-  .site-content {
-    @extend .column;
-  }
-
-  footer.site-footer {
-    @extend .footer;
-    color: $light;
-  }
-}

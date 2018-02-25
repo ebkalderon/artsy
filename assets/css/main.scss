@@ -3,3 +3,18 @@
 ---
 
 @import "artsy";
+
+$backgrounds: (
+  {% for post in site.posts %}
+    {% if post.image %}
+      {{ post.title | slugify }}: '{{ post.image | relative_url }}',
+    {% endif %}
+  {% endfor %}
+);
+
+@each $title, $image in $backgrounds {
+  .hero-body-#{$title} {
+    background: linear-gradient($hero-body-blog-background-color, $hero-body-blog-background-color), url('#{$image}');
+    background-size: cover;
+  }
+}
