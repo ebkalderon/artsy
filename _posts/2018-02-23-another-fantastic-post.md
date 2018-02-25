@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "Another fantastic post"
-image: /assets/img/something.jpeg
-tags: [weird, furniture]
+date: 2018-02-23 23:50:10 -0500
 categories: music
-author: "Glass Joe"
-date: 2018-02-23 23:50:10
-meta: "Mahogany Furniture"
+author: Glass Joe
+image: /assets/img/something.jpeg
+tags: weird furniture
 ---
 
 The main point of this post is to show off the appearance of the Markdown blog

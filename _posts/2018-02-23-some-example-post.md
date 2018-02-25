@@ -1,11 +1,10 @@
 ---
 layout: post
 title: "This post demonstrates post content styles"
-image: /assets/img/joey-pilgrim-251356-unsplash.jpg
+date: 2018-02-23 21:10:45 -0500
 categories: junk
-author: "Bart Simpson"
-date: 2018-02-23 21:10:45
-meta: "Springfield"
+author: Bart Simpson
+image: /assets/img/joey-pilgrim-251356-unsplash.jpg
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
