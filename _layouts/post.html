@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header class="hero is-primary is-medium">
-  <div class="hero-body has-text-centered" style="background-image: url({{ page.image }}); background-size: cover;">
+  <div class="hero-body has-text-centered" style="background-image: url({{ page.image | relative_url }}); background-size: cover;">
     <h1 class="title is-size-1-desktop">
       {{ page.title }}
     </h1>

@@ -17,7 +17,7 @@
 
   .site-header {
     @extend .column;
-    @extend .is-narrow;
+    // @extend .is-narrow;
     @extend .is-transparent;
 
     min-width: 10%;
