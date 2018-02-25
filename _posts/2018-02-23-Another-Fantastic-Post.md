@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Another fantastic post"
+image: /assets/img/something.jpeg
+tags: [weird, furniture]
 categories: music
 author: "Glass Joe"
-tags: [weird, furniture]
-image: /assets/img/something.jpeg
+date: 2018-02-23 23:50:10
 meta: "Mahogany Furniture"
 ---
 

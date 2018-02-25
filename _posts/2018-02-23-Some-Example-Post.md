@@ -3,6 +3,7 @@ layout: post
 title: "This post demonstrates post content styles"
 categories: junk
 author: "Bart Simpson"
+date: 2018-02-23 21:10:45
 meta: "Springfield"
 ---
 
