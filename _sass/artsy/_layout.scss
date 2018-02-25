@@ -9,8 +9,9 @@
 
   header.site-header {
     @extend .column;
+    @extend .is-1-desktop;
     // @extend .is-narrow;
-    min-width: 10%;
+    min-width: 12.5%;
   }
 
   .site-content {

@@ -10,20 +10,22 @@ layout: default
   </header>
 
   <!-- Posts selection -->
-  <div class="columns is-multiline">
-    {% for post in site.posts %}
-      <div class="column is-one-quarter-widescreen is-one-half-tablet">
-        <a href="{{ post.url | relative_url }}">
-          {%-
-            include blog_card.html
-            image=post.image
-            title=post.title
-            date=post.date
-            excerpt=post.excerpt
-            tags=post.tags
-          -%}
-        </a>
-      </div>
-    {% endfor %}
+  <div class="section">
+    <div class="columns is-multiline">
+      {% for post in site.posts %}
+        <div class="column is-one-quarter-widescreen is-one-half-tablet">
+          <a href="{{ post.url | relative_url }}">
+            {%-
+              include blog_card.html
+              image=post.image
+              title=post.title
+              date=post.date
+              excerpt=post.excerpt
+              tags=post.tags
+            -%}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
   </div>
 </section>

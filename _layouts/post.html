@@ -12,7 +12,7 @@ layout: default
       <h1 class="title is-size-1-desktop is-spaced">
         {{ page.title }}
       </h1>
-      <h4 class="subtitle">
+      <h4 class="subtitle is-size-3-desktop">
         {% if page.author %}
           {{ page.author }} |
         {% else %}
@@ -26,8 +26,12 @@ layout: default
     </div>
   </header>
   <section class="section">
-    <div class="container content">
-      {{ content }}
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <div class="content">
+          {{ content }}
+        </div>
+      </div>
     </div>
   </section>
 </article>
