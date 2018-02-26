@@ -1,13 +1,12 @@
 <div class="card">
-  <!-- Post thumbnail -->
   {% if include.image %}
+  <!-- Post thumbnail -->
   <div class="card-image">
     <figure class="image is-2by1">
       <img src="{{ include.image | relative_url }}" alt="Image for {{ include.title }}">
     </figure>
   </div>
   {% endif %}
-
   <!-- Post details -->
   <section class="card-content">
     <h4 class="title is-4">{{ include.title | upcase }}</h4>
@@ -18,7 +17,6 @@
       {{ include.excerpt | strip_html }}
     </p>
   </section>
-
   <!-- Tags (if any) -->
   {% if include.tags %}
   <div class="card-content">
