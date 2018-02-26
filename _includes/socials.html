@@ -1,0 +1,59 @@
+<div class="level">
+  {% for social in site.socials %}
+    {%- if social[0] == 'codepen' -%}
+      {%- assign name = 'Codepen.io' -%}
+      {%- assign icon = 'fab fa-codepen' -%}
+      {%- capture url -%}https://codepen.io/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'dribbble' -%}
+      {%- assign name = 'Dribbble' -%}
+      {%- assign icon = 'fab fa-dribbble' -%}
+      {%- capture url -%}https://dribbble.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'email' -%}
+      {%- assign name = 'Email' -%}
+      {%- assign icon = 'fas fa-envelope' -%}
+      {%- capture url -%}mailto:{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'facebook' -%}
+      {%- assign name = 'Facebook' -%}
+      {%- assign icon = 'fab fa-facebook' -%}
+      {%- capture url -%}https://facebook.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'github' -%}
+      {%- assign name = 'GitHub' -%}
+      {%- assign icon = 'fab fa-github' -%}
+      {%- capture url -%}https://github.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'google+' -%}
+      {%- assign name = 'Google+' -%}
+      {%- assign icon = 'fab fa-google-plus' -%}
+      {%- capture url -%}https://plus.google.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'keybase' -%}
+      {%- assign name = 'Keybase' -%}
+      {%- assign icon = 'fa fa-key' -%}
+      {%- capture url -%}https://keybase.io/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'linkedin' -%}
+      {%- assign name = 'LinkedIn' -%}
+      {%- assign icon = 'fab fa-linkedin' -%}
+      {%- capture url -%}https://www.linkedin.com/in/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'pinterest' -%}
+      {%- assign name = 'Pinterest' -%}
+      {%- assign icon = 'fab fa-pinterest' -%}
+      {%- capture url -%}https://www.pinterest.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'reddit' -%}
+      {%- assign name = 'Reddit' -%}
+      {%- assign icon = 'fab fa-reddit-alien' -%}
+      {%- capture url -%}https://www.reddit.com/user/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'twitter' -%}
+      {%- assign name = 'Twitter' -%}
+      {%- assign icon = 'fab fa-twitter' -%}
+      {%- capture url -%}https://twitter.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'youtube' -%}
+      {%- assign name = 'YouTube' -%}
+      {%- assign icon = 'fab fa-youtube' -%}
+      {%- capture url -%}https://www.youtube.com/user/{{ social[1] }}{%- endcapture -%}
+    {%- endif -%}
+
+    <a class="level-item" title="{{ name }}" href="{{ url }}">
+      <figure class="icon is-large">
+        <i class="{{ icon }} fa-2x"></i>
+      </figure>
+    </a>
+  {% endfor %}
+</div>

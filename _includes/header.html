@@ -14,12 +14,17 @@
 
     <!-- Navigation links -->
     <div class="navbar-menu" id="navbar-menu-id">
-      {% for link in site.data.navigation %}
-        {%- if link.url == page.url -%}
-          <a class="navbar-item is-active" href="{{ link.url | relative_url }}">{{ link.name }}</a>
+      {% for link in site.navigation %}
+        {%- assign name = link[0] -%}
+        {%- assign url = link[1] -%}
+
+        {%- if url == page.url -%}
+          {%- assign active = 'is-active' -%}
         {%- else -%}
-          <a class="navbar-item" href="{{ link.url | relative_url }}">{{ link.name }}</a>
+          {%- assign active = '' -%}
         {%- endif -%}
+
+        <a class="navbar-item {{ active }}" href="{{ url | relative_url }}">{{ name }}</a>
       {% endfor %}
     </div>
   </nav>

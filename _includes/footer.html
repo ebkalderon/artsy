@@ -5,15 +5,7 @@
       <p>Built in Jekyll with <i class="fa fa-heart"></i></p>
     </div>
     <div class="column">
-      <div class="level">
-      {% for social in site.data.socials %}
-        <a class="level-item" href="{{ social.url }}">
-          <figure class="icon is-large">
-            <i class="fa-2x {{ social.icon }}"></i>
-          </figure>
-        </a>
-      {% endfor %}
-      </div>
+      {% include socials.html %}
     </div>
     <div class="column">
       {{ site.description }}

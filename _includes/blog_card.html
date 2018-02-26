@@ -1,12 +1,12 @@
 <div class="card">
   <!-- Post thumbnail -->
+  {% if include.image %}
   <div class="card-image">
     <figure class="image is-2by1">
-      {% if include.image %}
       <img src="{{ include.image | relative_url }}" alt="Image for {{ include.title }}">
-      {% endif %}
     </figure>
   </div>
+  {% endif %}
 
   <!-- Post details -->
   <section class="card-content">
