@@ -1,46 +1,79 @@
-#
 # Welcome to the Artsy theme for Jekyll!
 #
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+#
+# 1. Site settings
+# 2. Search engine optimization settings
+# 3. Navigation settings
+# 4. Social settings
+# 5. Post settings
+# 6. Jekyll settings
+# 7. Build settings
+# 8. Files excluded from builds
 
-# Site settings
+# 1. Site settings
 title: Your awesome title
-author: GitHub User
 email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
+baseurl: /artsy # the subpath of your site, e.g. /blog
+url: https://ebkalderon.github.io # the base hostname & protocol for your site
 
-# URL to a site-wide logo (e.g. /assets/your-company-logo.jpg)
-logo: /assets/img/logo.png
-
-# Social profiles
-social:
-  name: {{ site.author }}
-  links:
+# 2. Search engine optimization settings
+author: GitHub User # jekyll-seo-tag > default author name
+lang: en_US # jekyll-seo-tag > default language information
+logo: /assets/img/logo.png # jekyll-seo-tag > site-wide logo
+social: # jekyll-seo-tag > specifying social profiles
+  name: {{ site.author }} # jekyll-seo-tag > author's real name
+  links: # jekyll-seo-tag > links to social profiles
     - https://github.com/ebkalderon
     - https://www.linkedin.com/in/ebkalderon
     - https://www.reddit.com/user/ebkalderon
     - https://keybase.io/ebkalderon
 
-# Post settings
+# 3. Navigation settings
+navigation:
+  Portfolio: /portfolio/
+  Blog: /blog/
+  About: /about/
+  Contact: /contact/
+
+# 4. Social settings
+socials:
+  github: https://github.com/ebkalderon
+  linkedin: https://www.linkedin.com/in/ebkalderon
+  reddit: https://www.reddit.com/user/ebkalderon
+  keybase: https://keybase.io/ebkalderon
+  # twitter: https://twitter.com/foo
+  # facebook: https://facebook.com/foo
+  # google+: https://plus.google.com/+foo
+  # pinterest: https://www.pinterest.com/foo/
+
+# 5. Post settings
 collections:
   posts:
     output: true
     permalink: /blog/:categories/:year/:month/:day/:title/
 
-# Sass settings
+# 6. Jekyll settings
 sass:
-  sass_dir: ./_scss
+  style: compressed # enables CSS compression
+# excerpt_separator: <!-- more --> # marks end of excerpts in posts
+timezone: America/New_York # default timezone for blog posts
 
-# Build settings
+# 7. Build settings
 markdown: kramdown
 kramdown:
     auto_ids: true
 # theme: artsy
 remote_theme: ebkalderon/artsy
 
-# Exclude from processing.
+# 8. Files excluded from builds
 exclude:
   - Gemfile
   - Gemfile.lock

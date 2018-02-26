@@ -5,7 +5,7 @@
       <a class="navbar-item" href="{{ "/" | relative_url }}">
         <img src="{{ site.logo | relative_url }}" alt="Logo">
       </a>
-      <div class="navbar-burger burger" data-target="nav-menu-id">
+      <div class="navbar-burger burger" data-target="navbar-menu-id">
         <span></span>
         <span></span>
         <span></span>
@@ -13,7 +13,7 @@
     </div>
 
     <!-- Navigation links -->
-    <div class="navbar-menu" id="nav-menu-id">
+    <div class="navbar-menu" id="navbar-menu-id">
       {% for link in site.data.navigation %}
         {%- if link.url == page.url -%}
           <a class="navbar-item is-active" href="{{ link.url | relative_url }}">{{ link.name }}</a>
