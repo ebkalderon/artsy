@@ -14,9 +14,9 @@
     <time class="subtitle is-6" datetime="{{ include.date | date_to_xmlschema }}">
       {{ include.date | date: "%B %e, %Y" }}
     </time>
-    <div class="content">
-      {{ include.excerpt }}
-    </div>
+    <p>
+      {{ include.excerpt | strip_html }}
+    </p>
   </section>
 
   <!-- Tags (if any) -->
