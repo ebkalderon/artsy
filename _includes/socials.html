@@ -1,6 +1,10 @@
 <div class="level">
   {% for social in site.socials %}
-    {%- if social[0] == 'codepen' -%}
+    {%- if social[0] == 'behance' -%}
+      {%- assign name = 'Behance' -%}
+      {%- assign icon = 'fab fa-behance' -%}
+      {%- capture url -%}https://www.behance.net/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'codepen' -%}
       {%- assign name = 'Codepen.io' -%}
       {%- assign icon = 'fab fa-codepen' -%}
       {%- capture url -%}https://codepen.io/{{ social[1] }}{%- endcapture -%}
@@ -24,6 +28,10 @@
       {%- assign name = 'Google+' -%}
       {%- assign icon = 'fab fa-google-plus' -%}
       {%- capture url -%}https://plus.google.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'instagram' -%}
+      {%- assign name = 'Instagram' -%}
+      {%- assign icon = 'fab fa-instagram' -%}
+      {%- capture url -%}https://www.instagram.com/{{ social[1] }}{%- endcapture -%}
     {%- elsif social[0] == 'keybase' -%}
       {%- assign name = 'Keybase' -%}
       {%- assign icon = 'fa fa-key' -%}
@@ -32,6 +40,14 @@
       {%- assign name = 'LinkedIn' -%}
       {%- assign icon = 'fab fa-linkedin' -%}
       {%- capture url -%}https://www.linkedin.com/in/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'patreon' -%}
+      {%- assign name = 'Patreon' -%}
+      {%- assign icon = 'fab fa-patreon' -%}
+      {%- capture url -%}https://www.patreon.com/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'phone' -%}
+      {%- assign name = 'Phone' -%}
+      {%- assign icon = 'fas fa-phone' -%}
+      {%- capture url -%}tel:{{ social[1] }}{%- endcapture -%}
     {%- elsif social[0] == 'pinterest' -%}
       {%- assign name = 'Pinterest' -%}
       {%- assign icon = 'fab fa-pinterest' -%}
@@ -48,6 +64,10 @@
       {%- assign name = 'YouTube' -%}
       {%- assign icon = 'fab fa-youtube' -%}
       {%- capture url -%}https://www.youtube.com/user/{{ social[1] }}{%- endcapture -%}
+    {%- else -%}
+      {%- assign name = social[0] -%}
+      {%- assign icon = 'fas fa-link' -%}
+      {%- capture url -%}{{ social[1] }}{%- endcapture -%}
     {%- endif -%}
 
     <a class="level-item" title="{{ name }}" href="{{ url }}">

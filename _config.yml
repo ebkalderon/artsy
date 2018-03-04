@@ -45,14 +45,18 @@ navigation:
 
 # 4. Social settings
 socials:
+  # behance: foo
   # codepen: foo
   # dribbble: foo
   email: your-email@domain.com
   # facebook: foo
   github: ebkalderon
-  #google+: foo
+  # google+: foo
+  # instagram: foo
   keybase: ebkalderon
   linkedin: ebkalderon
+  # patreon: foo
+  # phone: 123-456-7890
   # pinterest: foo
   reddit: ebkalderon
   # twitter: foo
