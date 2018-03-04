@@ -40,6 +40,10 @@
       {%- assign name = 'LinkedIn' -%}
       {%- assign icon = 'fab fa-linkedin' -%}
       {%- capture url -%}https://www.linkedin.com/in/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'medium' -%}
+      {%- assign name = 'Medium' -%}
+      {%- assign icon = 'fab fa-medium' -%}
+      {%- capture url -%}https://medium.com/@{{ social[1] }}{%- endcapture -%}
     {%- elsif social[0] == 'patreon' -%}
       {%- assign name = 'Patreon' -%}
       {%- assign icon = 'fab fa-patreon' -%}
@@ -56,6 +60,10 @@
       {%- assign name = 'Reddit' -%}
       {%- assign icon = 'fab fa-reddit-alien' -%}
       {%- capture url -%}https://www.reddit.com/user/{{ social[1] }}{%- endcapture -%}
+    {%- elsif social[0] == 'snapchat' -%}
+      {%- assign name = 'Snapchat' -%}
+      {%- assign icon = 'fab fa-snapchat-ghost' -%}
+      {%- capture url -%}https://www.snapchat.com/add/{{ social[1] }}{%- endcapture -%}
     {%- elsif social[0] == 'twitter' -%}
       {%- assign name = 'Twitter' -%}
       {%- assign icon = 'fab fa-twitter' -%}
@@ -63,7 +71,7 @@
     {%- elsif social[0] == 'youtube' -%}
       {%- assign name = 'YouTube' -%}
       {%- assign icon = 'fab fa-youtube' -%}
-      {%- capture url -%}https://www.youtube.com/user/{{ social[1] }}{%- endcapture -%}
+      {%- capture url -%}https://www.youtube.com/channel/{{ social[1] }}{%- endcapture -%}
     {%- else -%}
       {%- assign name = social[0] -%}
       {%- assign icon = 'fas fa-link' -%}
