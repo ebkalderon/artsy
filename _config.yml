@@ -9,18 +9,16 @@
 # 2. Search engine optimization settings
 # 3. Navigation settings
 # 4. Social settings
-# 5. Post settings
+# 5. Collection settings
 # 6. Jekyll settings
 # 7. Build settings
 # 8. Files excluded from builds
 
 # 1. Site settings
-title: Your awesome title
+title: Artsy
 email: your-email@domain.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+description: > # this means to ignore newlines until "baseurl:"
+  A flat portfolio magazine theme for Jekyll.
 baseurl: /artsy # the subpath of your site, e.g. /blog
 url: https://ebkalderon.github.io # the base hostname & protocol for your site
 
@@ -65,8 +63,11 @@ socials:
   # twitter: foo
   youtube: UCh4Zb52Vv5AfxbEksOD1sDg
 
-# 5. Post settings
+# 5. Collection settings
 collections:
+  portfolio:
+    output: true
+    permalink: /portfolio/:path/
   posts:
     output: true
     permalink: /blog/:categories/:year/:month/:day/:title/
@@ -79,7 +80,7 @@ timezone: America/New_York # default timezone for blog posts
 # 7. Build settings
 markdown: kramdown
 kramdown:
-    auto_ids: true
+  auto_ids: true
 # theme: artsy
 remote_theme: ebkalderon/artsy
 
