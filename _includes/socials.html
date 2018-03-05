@@ -1,82 +1,83 @@
 <div class="level">
   {% for social in site.socials %}
-    {%- if social[0] == 'behance' -%}
-      {%- assign name = 'Behance' -%}
-      {%- assign icon = 'fab fa-behance' -%}
-      {%- capture url -%}https://www.behance.net/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'codepen' -%}
-      {%- assign name = 'Codepen.io' -%}
-      {%- assign icon = 'fab fa-codepen' -%}
-      {%- capture url -%}https://codepen.io/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'dribbble' -%}
-      {%- assign name = 'Dribbble' -%}
-      {%- assign icon = 'fab fa-dribbble' -%}
-      {%- capture url -%}https://dribbble.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'email' -%}
-      {%- assign name = 'Email' -%}
-      {%- assign icon = 'fas fa-envelope' -%}
-      {%- capture url -%}mailto:{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'facebook' -%}
-      {%- assign name = 'Facebook' -%}
-      {%- assign icon = 'fab fa-facebook' -%}
-      {%- capture url -%}https://facebook.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'github' -%}
-      {%- assign name = 'GitHub' -%}
-      {%- assign icon = 'fab fa-github' -%}
-      {%- capture url -%}https://github.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'google+' -%}
-      {%- assign name = 'Google+' -%}
-      {%- assign icon = 'fab fa-google-plus' -%}
-      {%- capture url -%}https://plus.google.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'instagram' -%}
-      {%- assign name = 'Instagram' -%}
-      {%- assign icon = 'fab fa-instagram' -%}
-      {%- capture url -%}https://www.instagram.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'keybase' -%}
-      {%- assign name = 'Keybase' -%}
-      {%- assign icon = 'fa fa-key' -%}
-      {%- capture url -%}https://keybase.io/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'linkedin' -%}
-      {%- assign name = 'LinkedIn' -%}
-      {%- assign icon = 'fab fa-linkedin' -%}
-      {%- capture url -%}https://www.linkedin.com/in/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'medium' -%}
-      {%- assign name = 'Medium' -%}
-      {%- assign icon = 'fab fa-medium' -%}
-      {%- capture url -%}https://medium.com/@{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'patreon' -%}
-      {%- assign name = 'Patreon' -%}
-      {%- assign icon = 'fab fa-patreon' -%}
-      {%- capture url -%}https://www.patreon.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'phone' -%}
-      {%- assign name = 'Phone' -%}
-      {%- assign icon = 'fas fa-phone' -%}
-      {%- capture url -%}tel:{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'pinterest' -%}
-      {%- assign name = 'Pinterest' -%}
-      {%- assign icon = 'fab fa-pinterest' -%}
-      {%- capture url -%}https://www.pinterest.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'reddit' -%}
-      {%- assign name = 'Reddit' -%}
-      {%- assign icon = 'fab fa-reddit-alien' -%}
-      {%- capture url -%}https://www.reddit.com/user/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'snapchat' -%}
-      {%- assign name = 'Snapchat' -%}
-      {%- assign icon = 'fab fa-snapchat-ghost' -%}
-      {%- capture url -%}https://www.snapchat.com/add/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'twitter' -%}
-      {%- assign name = 'Twitter' -%}
-      {%- assign icon = 'fab fa-twitter' -%}
-      {%- capture url -%}https://twitter.com/{{ social[1] }}{%- endcapture -%}
-    {%- elsif social[0] == 'youtube' -%}
-      {%- assign name = 'YouTube' -%}
-      {%- assign icon = 'fab fa-youtube' -%}
-      {%- capture url -%}https://www.youtube.com/channel/{{ social[1] }}{%- endcapture -%}
-    {%- else -%}
-      {%- assign name = social[0] -%}
-      {%- assign icon = 'fas fa-link' -%}
-      {%- capture url -%}{{ social[1] }}{%- endcapture -%}
-    {%- endif -%}
+    {%- case social[0] -%}
+      {%- when 'behance' -%}
+        {%- assign name = 'Behance' -%}
+        {%- assign icon = 'fab fa-behance' -%}
+        {%- capture url -%}https://www.behance.net/{{ social[1] }}{%- endcapture -%}
+      {%- when 'codepen' -%}
+        {%- assign name = 'Codepen.io' -%}
+        {%- assign icon = 'fab fa-codepen' -%}
+        {%- capture url -%}https://codepen.io/{{ social[1] }}{%- endcapture -%}
+      {%- when 'dribbble' -%}
+        {%- assign name = 'Dribbble' -%}
+        {%- assign icon = 'fab fa-dribbble' -%}
+        {%- capture url -%}https://dribbble.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'email' -%}
+        {%- assign name = 'Email' -%}
+        {%- assign icon = 'fas fa-envelope' -%}
+        {%- capture url -%}mailto:{{ social[1] }}{%- endcapture -%}
+      {%- when 'facebook' -%}
+        {%- assign name = 'Facebook' -%}
+        {%- assign icon = 'fab fa-facebook' -%}
+        {%- capture url -%}https://facebook.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'github' -%}
+        {%- assign name = 'GitHub' -%}
+        {%- assign icon = 'fab fa-github' -%}
+        {%- capture url -%}https://github.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'google+' -%}
+        {%- assign name = 'Google+' -%}
+        {%- assign icon = 'fab fa-google-plus' -%}
+        {%- capture url -%}https://plus.google.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'instagram' -%}
+        {%- assign name = 'Instagram' -%}
+        {%- assign icon = 'fab fa-instagram' -%}
+        {%- capture url -%}https://www.instagram.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'keybase' -%}
+        {%- assign name = 'Keybase' -%}
+        {%- assign icon = 'fa fa-key' -%}
+        {%- capture url -%}https://keybase.io/{{ social[1] }}{%- endcapture -%}
+      {%- when 'linkedin' -%}
+        {%- assign name = 'LinkedIn' -%}
+        {%- assign icon = 'fab fa-linkedin' -%}
+        {%- capture url -%}https://www.linkedin.com/in/{{ social[1] }}{%- endcapture -%}
+      {%- when 'medium' -%}
+        {%- assign name = 'Medium' -%}
+        {%- assign icon = 'fab fa-medium' -%}
+        {%- capture url -%}https://medium.com/@{{ social[1] }}{%- endcapture -%}
+      {%- when 'patreon' -%}
+        {%- assign name = 'Patreon' -%}
+        {%- assign icon = 'fab fa-patreon' -%}
+        {%- capture url -%}https://www.patreon.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'phone' -%}
+        {%- assign name = 'Phone' -%}
+        {%- assign icon = 'fas fa-phone' -%}
+        {%- capture url -%}tel:{{ social[1] }}{%- endcapture -%}
+      {%- when 'pinterest' -%}
+        {%- assign name = 'Pinterest' -%}
+        {%- assign icon = 'fab fa-pinterest' -%}
+        {%- capture url -%}https://www.pinterest.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'reddit' -%}
+        {%- assign name = 'Reddit' -%}
+        {%- assign icon = 'fab fa-reddit-alien' -%}
+        {%- capture url -%}https://www.reddit.com/user/{{ social[1] }}{%- endcapture -%}
+      {%- when 'snapchat' -%}
+        {%- assign name = 'Snapchat' -%}
+        {%- assign icon = 'fab fa-snapchat-ghost' -%}
+        {%- capture url -%}https://www.snapchat.com/add/{{ social[1] }}{%- endcapture -%}
+      {%- when 'twitter' -%}
+        {%- assign name = 'Twitter' -%}
+        {%- assign icon = 'fab fa-twitter' -%}
+        {%- capture url -%}https://twitter.com/{{ social[1] }}{%- endcapture -%}
+      {%- when 'youtube' -%}
+        {%- assign name = 'YouTube' -%}
+        {%- assign icon = 'fab fa-youtube' -%}
+        {%- capture url -%}https://www.youtube.com/channel/{{ social[1] }}{%- endcapture -%}
+      {%- else -%}
+        {%- assign name = social[0] -%}
+        {%- assign icon = 'fas fa-link' -%}
+        {%- capture url -%}{{ social[1] }}{%- endcapture -%}
+    {%- endcase -%}
 
     <a class="level-item" title="{{ name }}" href="{{ url }}">
       <figure class="icon is-large">
