@@ -2,14 +2,14 @@
   {% if include.image %}
   <!-- Post thumbnail -->
   <div class="card-image">
-    <figure class="image is-2by1">
-      <img src="{{ include.image | relative_url }}" alt="Image for {{ include.title }}">
+    <figure class="image">
+      <img src="{{ include.image | relative_url }}" alt="Thumbnail for {{ include.title }}">
     </figure>
   </div>
   {% endif %}
   <!-- Post details -->
   <section class="card-content">
-    <h4 class="title is-4">{{ include.title | upcase }}</h4>
+    <h4 class="title is-4">{{ include.title }}</h4>
     <time class="subtitle is-6" datetime="{{ include.date | date_to_xmlschema }}">
       {{ include.date | date: "%B %e, %Y" }}
     </time>

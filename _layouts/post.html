@@ -3,12 +3,13 @@ layout: default
 ---
 
 <article>
-  <header class="hero is-primary is-large">
-    {% if page.image %}
-    <div class="hero-body has-text-centered hero-body-{{ page.title | slugify }}">
-    {% else %}
-    <div class="hero-body has-text-centered">
-    {% endif %}
+  {%- if page.image -%}
+  {%- capture thumbnail -%}hero-body-{{ page.title | slugify }}{%- endcapture -%}
+  {%- else -%}
+  {%- assign thumbnail = '' -%}
+  {%- endif -%}
+  <header class="hero is-primary is-large {{ thumbnail }}">
+    <div class="hero-post-body">
       <h1 class="title is-size-2-desktop is-spaced">
         {{ page.title }}
       </h1>

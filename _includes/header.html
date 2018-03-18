@@ -18,7 +18,7 @@
         {%- assign name = link[0] -%}
         {%- assign url = link[1] -%}
 
-        {%- if url == page.url -%}
+        {%- if page.url contains url -%}
           {%- assign active = 'is-active' -%}
         {%- else -%}
           {%- assign active = '' -%}
