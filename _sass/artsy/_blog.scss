@@ -1,0 +1,25 @@
+////
+/// Blog specific styles
+////
+
+.blog-columns {
+  @extend .columns;
+  @extend .is-multiline;
+
+  & > .blog-column {
+    @extend .column;
+    @extend .is-half-tablet;
+    @extend .is-one-third-desktop;
+    @extend .is-one-third-widescreen;
+    @extend .is-one-quarter-fullhd;
+    animation: slide-up 400ms ease-in 0.5s normal forwards;
+    opacity: 0;
+  }
+}
+
+.hero-post-body {
+  @extend .hero-body;
+  @extend .has-text-centered;
+  animation: slide-up 400ms ease-in 1 normal forwards;
+  opacity: 0;
+}

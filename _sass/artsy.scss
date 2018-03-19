@@ -7,9 +7,11 @@
 
 @import "artsy/variables";
 
+@import "vendor/bulma";
+
+@import "artsy/animations";
 @import "artsy/base";
+@import "artsy/blog";
 @import "artsy/layout";
 @import "artsy/navigation";
 @import "artsy/syntax";
-
-@import "vendor/bulma";
