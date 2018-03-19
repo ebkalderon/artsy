@@ -11,6 +11,10 @@
     left: 0;
     top: 0;
     width: $navbar-min-width;
+
+    .navbar-item img {
+      max-height: none;
+    }
   }
 
   .navbar-menu {
