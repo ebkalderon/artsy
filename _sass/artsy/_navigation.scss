@@ -13,9 +13,10 @@
     width: $navbar-min-width;
 
     .navbar-item img {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
       max-height: none;
+      padding-top: 2em;
+      padding-bottom: 2em;
+      max-width: calc(#{$navbar-min-width} - 1.5em);
     }
   }
 
